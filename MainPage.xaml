@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator2022.MainPage">
+
+	<ScrollView>
+		<Grid
+            RowSpacing="0"
+            ColumnSpacing="0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" >
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="40" />
+				<ColumnDefinition Width="40" />
+				<ColumnDefinition Width="40" />
+				<ColumnDefinition Width="40" />
+			</Grid.ColumnDefinitions>
+
+            <Border Margin="0" Grid.Column="0" Grid.ColumnSpan="4" 
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 10,10,10,10"
+                    Background="white"
+                    >
+                <Grid>
+                    <Label
+					HorizontalOptions="End"
+					Text="0"
+                    TextColor="Gray"
+                    FontFamily="OpenSans-Regular"
+					x:Name="lblScreen"
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="32"
+					VerticalOptions="Center"
+                    />
+                </Grid>
+            </Border>
+
+			<Button
+                x:Name="ButSign"
+                Text="+/-"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="5"
+                Grid.Column="0"
+                Clicked="Sign"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButResult"
+                Text="="
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="5"
+                Grid.Column="3"
+                Clicked="Result"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButClear"
+                Text="C"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="Clear"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButDot"
+                Text="."
+                FontSize="14"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="5"
+                Grid.Column="2"
+                Clicked="Dot"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButPlus"
+                Text="+"
+                FontSize="14"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="4"
+                Grid.Column="3"
+                Clicked="Plus"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButMinus"
+                Text="-"
+                FontSize="14"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="3"
+                Grid.Column="3"
+                Clicked="Minus"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButMultiply"
+                Text="*"
+                FontSize="14"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="2"
+                Grid.Column="3"
+                Clicked="Multiply"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="ButDivide"
+                Text="/"
+                FontSize="14"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="1"
+                Grid.Column="3"
+                Clicked="Divide"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="One"
+                Text="1"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="4"
+                Grid.Column="0"
+                Clicked="NumOne"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Two"
+                Text="2"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="4"
+                Grid.Column="1"
+                Clicked="NumTwo"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Three"
+                Text="3"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="4"
+                Grid.Column="2"
+                Clicked="NumThree"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Four"
+                Text="4"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="NumFour"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Five"
+                Text="5"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="3"
+                Grid.Column="1"
+                Clicked="NumFive"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Six"
+                Text="6"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="3"
+                Grid.Column="2"
+                Clicked="NumSix"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Seven"
+                Text="7"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="NumSeven"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Eight"
+                Text="8"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="NumEight"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Nine"
+                Text="9"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="2"
+                Grid.Column="2"
+                Clicked="NumNine"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="Zero"
+                Text="0"
+                FontSize="20"
+                FontFamily="OpenSans-Semibold"
+                Grid.Row="5"
+                Grid.Column="1"
+                Clicked="NumZero"
+                HorizontalOptions="Center" />
+
+		</Grid>
+	</ScrollView>
+
+</ContentPage>
